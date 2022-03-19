@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const connection = async () => {
+
+const conexion = async () => {
     try {
     await mongoose.connect("mongodb://127.0.0.1:27017/peliculas");
     console.log("DB conectada a tope");
@@ -8,6 +9,5 @@ const connection = async () => {
     console.log(error);
      }
     };
-connection (); 
 
-module.exports = mongoose; 
+module.exports = conexion; 

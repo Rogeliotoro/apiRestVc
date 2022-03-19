@@ -1,7 +1,9 @@
 const express = require('express');
-const mongoose = require('./config/mongoDb.js');
-const morgan = require('morgan')
+const morgan = require('morgan');
+const conexion = require('./config/mongoDb.js');
 const app = express ();
+
+conexion (); 
 
 
 const port = 7000;
