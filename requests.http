@@ -1,0 +1,28 @@
+###
+POST http://localhost:7000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre":"simon",
+    "email":"simon@bolivar.com",
+    "pais":"venezuela"
+}
+
+###
+GET http://localhost:7000/api/users HTTP/1.1
+
+### 
+GET http://localhost:7000/api/users/6236158efa239bf2d08a6cbd   HTTP/1.1
+
+###
+PUT  http://localhost:7000/api/users/6236158efa239bf2d08a6cbd HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre":"simonn",
+    "email":"simon@bolivar.com",
+    "pais":"venezuela"
+}
+###
+DELETE http://localhost:7000/api/users/6236137f43b4da54e1c3b1eb HTTP/1.1
+Content-Type: application/json
