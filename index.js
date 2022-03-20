@@ -4,12 +4,13 @@ const conexion = require('./config/mongoDb.js');
 const routerUser = require('./src/user/routes.js');
 const routerMovies = require ('./src/movies/routes.js')
 
+//variable de entorno
 require ('dotenv').config();
 
-const app = express ();
-
 //conexion DB
-conexion (); 
+conexion ();
+
+const app = express ();
 
 //routes prueba
 app.get('/',(req, res)=>{
@@ -21,6 +22,8 @@ const port = process.env.PORT || 7000;
 //middlewares
 app.use(morgan('dev'));
 app.use(express.json())
+
+//rutas de user y movies
 app.use('/api', routerUser);
 app.use('/api', routerMovies);
 

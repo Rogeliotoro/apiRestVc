@@ -23,4 +23,13 @@ const getMovies = (req, res)=>{
      .catch((error)=> res.json({mesanje: error}));
  };
 
- module.exports = {getMovies,postMovies, getMoviesId}
+ const getMoviesGe = (req , res) => {
+    const {genero} = req.body;
+    userSchema
+    .findOne(genero)
+    .then((data) => res.json(data))
+    .catch((error)=> res.json({mesanje: error}));
+};
+
+
+ module.exports = {getMovies,postMovies, getMoviesId, getMoviesGe}
