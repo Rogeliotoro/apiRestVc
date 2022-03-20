@@ -7,5 +7,4 @@ router.post("/users", postUsers);
 router.delete("/users/:id", deleteUser);
 router.put("/users/:id", putUsers);
 
-
 module.exports = router
