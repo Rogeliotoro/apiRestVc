@@ -3,9 +3,9 @@ POST http://localhost:7000/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "nombre":"evamaria",
-    "email":"eva@peron.com",
-    "pais":"españa"
+    "nombre":"camilo",
+    "email":"camilo@hut.com",
+    "pais":"bolivia"
 }
 
 ###
