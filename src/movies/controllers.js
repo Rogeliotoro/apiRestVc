@@ -15,4 +15,12 @@ const getMovies = (req, res)=>{
     .catch((error)=> res.json({mesanje:error}));
  };
 
- module.exports = {getMovies,postMovies}
+ const getMoviesId = (req , res) => {
+     const {id} = req.params;
+     userSchema
+     .findById(id)
+     .then((data) => res.json(data))
+     .catch((error)=> res.json({mesanje: error}));
+ };
+
+ module.exports = {getMovies,postMovies, getMoviesId}
