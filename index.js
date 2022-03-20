@@ -2,7 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const conexion = require('./config/mongoDb.js');
 const routerUser = require('./src/user/routes.js');
-const routerMovies = require ('./src/movies/routes.js')
+const routerMovies = require ('./src/movies/routes.js');
 
 //variable de entorno
 require ('dotenv').config();
