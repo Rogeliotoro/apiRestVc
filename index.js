@@ -17,6 +17,7 @@ app.get('/',(req, res)=>{
     res.send("prueba");
 });
 
+//puerto
 const port = process.env.PORT || 7000;
 
 //middlewares

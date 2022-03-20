@@ -22,5 +22,4 @@ const getMovies = (req, res)=>{
      .then((data) => res.json(data))
      .catch((error)=> res.json({mesanje: error}));
  };
-
  module.exports = {getMovies,postMovies, getMoviesId}
