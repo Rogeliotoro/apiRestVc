@@ -18,7 +18,7 @@ app.get('/',(req, res)=>{
 });
 
 //puerto
-const port = process.env.PORT || 7000;
+const port = process.env.PORT || 3000;
 
 //middlewares
 app.use(morgan('dev'));
