@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const jwt = require('jsonwebtoken');
 const conexion = require('./config/mongoDb.js');
 const routerUser = require('./src/user/routes.js');
 const routerMovies = require ('./src/movies/routes.js');
