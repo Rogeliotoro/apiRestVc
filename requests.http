@@ -1,28 +1,27 @@
 ###
-POST http://localhost:7000/api/users HTTP/1.1
+POST http://localhost:3000/api/movies HTTP/1.1
 Content-Type: application/json
 
 {
-    "nombre":"camilo",
-    "email":"camilo@hut.com",
-    "pais":"bolivia"
+    "titulo":"lalala",
+    "año": 2022,
+    "genero":"infantil"
 }
 
 ###
-GET http://localhost:3000/api/users HTTP/1.1
+GET http://localhost:3000/api/movies/ HTTP/1.1
 
 ### 
-GET http://localhost:3000/api/users/6236158efa239bf2d08a6cbd   HTTP/1.1
+GET http://localhost:3000/api/users/6239fe69edb57c39cf27344e   HTTP/1.1
 
 ###
-PUT  http://localhost:3000/api/users/6236158efa239bf2d08a6cbd HTTP/1.1
+PUT  http://localhost:3000/api/users/623851bc5a0088ee5bf1ec22 HTTP/1.1
 Content-Type: application/json
 
 {
-    "nombre":"evaa",
-    "email":"eva@peron.com",
+    "nombre":"manolito",
     "pais":"españa"
 }
 ###
-DELETE http://localhost:3000/api/users/6236140743b4da54e1c3b1ed HTTP/1.1
+DELETE http://localhost:3000/api/users/623851bc5a0088ee5bf1ec24 HTTP/1.1
 Content-Type: application/json

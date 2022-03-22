@@ -4,6 +4,8 @@ const jwt = require('jsonwebtoken');
 const conexion = require('./config/mongoDb.js');
 const routerUser = require('./src/user/routes.js');
 const routerMovies = require ('./src/movies/routes.js');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./config/openapi.js');
 
 //variable de entorno
 require ('dotenv').config();
@@ -28,6 +30,7 @@ app.use(express.json())
 //rutas de user y movies
 app.use('/api', routerUser);
 app.use('/api', routerMovies);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 //arranque del servidor.
 app.listen(port, () => console.log('servidor activo en el puerto ' ,port));

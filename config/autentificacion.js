@@ -5,10 +5,10 @@ const auth = (req ,res)=>{
     res.json(token)
 };
 
-/*const autentificacion = (tokentocheck) => {
+const autentificacion = (tokentocheck) => {
     const decoded = jwt.verify(tokentocheck, 'shhhhh'); 
     console.log(decoded)  
 };
-autentificacion("");*/
+autentificacion("");
 
 module.exports = auth;

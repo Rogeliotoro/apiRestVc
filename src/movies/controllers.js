@@ -1,11 +1,5 @@
 const userSchema = require ('./models.js');
 
-const getMovies = (req, res)=>{
-    userSchema
-    .find()
-    .then((data)=> res.json(data))
-    .catch((error)=> res.json({mesanje:error}));
- };
 
  const postMovies = (req, res)=>{
     const user = userSchema(req.body);
@@ -22,4 +16,17 @@ const getMovies = (req, res)=>{
      .then((data) => res.json(data))
      .catch((error)=> res.json({mesanje: error}));
  };
- module.exports = {getMovies,postMovies, getMoviesId}
+
+ const getMovieEs = async (req,res) => {
+    try{
+        const queryMovieEs = {};
+        if(req.query.titulo) queryMovieEs.titulo = req.query.titulo
+        if(req.query.año) queryMovieEs.año = req.query.año
+        if(req.query.genero) queryMovieEs.genero = req.query.genero
+        res.json(await userSchema.find(queryMovieEs))
+        }
+    catch(error){
+        res.json(error)
+    }
+}
+ module.exports = {postMovies, getMoviesId, getMovieEs }
